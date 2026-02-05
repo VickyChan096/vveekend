@@ -3,6 +3,8 @@
 <template>
   <div>
     <h1>測試<span>scss</span></h1>
+    <VBtn>按鈕</VBtn>
+    <Icon name="uil:github" style="color: black" />
   </div>
 </template>
 

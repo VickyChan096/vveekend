@@ -20,5 +20,17 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@nuxt/a11y', '@nuxt/eslint', '@nuxt/fonts', '@nuxt/hints', '@nuxt/icon', '@nuxt/image'],
+  modules: [
+    '@nuxt/a11y',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/hints',
+    '@nuxt/icon',
+    '@nuxt/image',
+    'vuetify-nuxt-module',
+  ],
+  vuetify: {
+    moduleOptions: {},
+    vuetifyOptions: './vuetify.config.ts',
+  },
 })
