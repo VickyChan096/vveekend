@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     host: "127.0.0.1",
     port: 9999,
   },
+  app: {
+    // 如果不是開發環境 (即生產環境)，就使用 /vveekend/
+    baseURL: process.env.NODE_ENV === "production" ? "/vveekend/" : "/",
+  },
   modules: [
     "@nuxt/a11y",
     "@nuxt/eslint",
