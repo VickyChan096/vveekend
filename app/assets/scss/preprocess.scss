@@ -1,0 +1,25 @@
+// Variable / @mixin / @function Settings
+
+// ColorPrimary
+$primary: #4eacba;
+// FontFamily
+$font-family-sans: 'roboto', 'Noto Sans TC', sans-serif;
+// FontSize
+$font-head1: 2rem; // 32px
+// FontWeight
+$font-weight-medium: 500;
+// LineHeight
+$line-height: 1.5;
+// LetterSpacing
+@function calc-letter-spacing($font-size, $multiplier: 0.02) {
+  @return $font-size * $multiplier;
+}
+
+@mixin Head1-medium {
+  font-family: $font-family-sans;
+  font-size: $font-head1;
+  font-weight: $font-weight-medium;
+  line-height: $line-height;
+  letter-spacing: calc-letter-spacing($font-head1);
+  @content;
+}

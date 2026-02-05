@@ -1,0 +1,8 @@
+@use '_reset';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // outline: 1px solid #d3d3d3;
+}
