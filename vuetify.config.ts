@@ -1,23 +1,30 @@
 import { defineVuetifyConfiguration } from 'vuetify-nuxt-module/custom-configuration'
 
-const vveekendTheme = {
+const lightTheme = {
   dark: false,
   colors: {
-    primary: '#4eacba',
+    primary: '#228796',
+  },
+}
+const darkTheme = {
+  dark: true,
+  colors: {
+    primary: '#bcbdff',
   },
 }
 
 export default defineVuetifyConfiguration({
   theme: {
-    defaultTheme: 'vveekendTheme',
+    defaultTheme: 'light',
     themes: {
-      vveekendTheme,
+      light: lightTheme,
+      dark: darkTheme,
     },
   },
   defaults: {
     VBtn: {
       color: 'primary',
-      size: 'small',
+      flat: true,
     },
   },
 })

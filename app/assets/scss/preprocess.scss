@@ -1,7 +1,39 @@
 // Variable / @mixin / @function Settings
 
-// ColorPrimary
-$primary: #4eacba;
+// Light Theme Colors
+$primary-light: #228796;
+$secondary-light: #caebf9;
+$background-light: #f5f5f5;
+$text-light: #000000;
+
+// Dark Theme Colors
+$primary-dark: #bcbdff;
+$secondary-dark: #c0c7ea;
+$background-dark: #121212;
+$text-dark: #ffffff;
+
+// 預設亮色主題
+:root {
+  --theme-primary: #{$primary-light};
+  --theme-secondary: #{$secondary-light};
+  --theme-background: #{$background-light};
+  --theme-text: #{$text-light};
+}
+
+// 暗色主題 - 通過 data-theme="dark" 控制
+[data-theme='dark'] {
+  --theme-primary: #{$primary-dark};
+  --theme-secondary: #{$secondary-dark};
+  --theme-background: #{$background-dark};
+  --theme-text: #{$text-dark};
+}
+
+// 方便使用的 mixin
+@mixin theme-colors {
+  color: var(--theme-text);
+  background-color: var(--theme-background);
+}
+
 // FontFamily
 $font-family-sans: 'roboto', 'Noto Sans TC', sans-serif;
 // FontSize
