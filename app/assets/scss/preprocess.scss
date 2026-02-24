@@ -12,7 +12,7 @@ $secondary-dark: #c0c7ea;
 $background-dark: #121212;
 $text-dark: #ffffff;
 
-// 預設亮色主題
+// 預設主題
 :root {
   --theme-primary: #{$primary-light};
   --theme-secondary: #{$secondary-light};
@@ -31,7 +31,7 @@ $text-dark: #ffffff;
 // 方便使用的 mixin
 @mixin theme-colors {
   color: var(--theme-text);
-  background-color: var(--theme-background);
+  background-color: var(--theme-primary);
 }
 
 // FontFamily
