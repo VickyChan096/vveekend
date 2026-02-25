@@ -15,6 +15,8 @@ interface ThemeControls {
   setSystem: () => void
 }
 
+// useAppTheme 是主題遙控器 (簡單使用)
+
 /**
  * 通用主題使用 hook
  */

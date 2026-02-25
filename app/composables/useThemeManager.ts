@@ -1,14 +1,15 @@
+import type { ThemeMode } from '@/types/layouts/ThemeMode'
+
+// useThemeManager 是主題工廠 (創建和管理)
+
 /**
  * 通用主題管理器
  * @param storageKey localStorage 的鍵名
  * @param provideKey provide/inject 的鍵名
  */
 export const useThemeManager = (storageKey: string, _provideKey: string) => {
-  const theme = useTheme()
-
-  type ThemeMode = 'light' | 'dark' | 'system'
+  const theme = useTheme() // Vuetify 主題管理器 API
   const themeMode = ref<ThemeMode>('system')
-
   const currentTheme = computed(() => theme.global.name.value)
 
   let mediaQuery: MediaQueryList | null = null
